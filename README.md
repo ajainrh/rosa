@@ -70,8 +70,6 @@ Below are all the steps required to create ROSA Cluster.
    sudo mv openshift-client-mac/oc /usr/local/bin
    sudo mv openshift-client-mac/kubectl /usr/local/bin
 	```
-	
-	
 12. Initialize ROSA again		
 <code>rosa init</code>
 
