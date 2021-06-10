@@ -40,5 +40,5 @@ Below are all the steps required to create ROSA Cluster.
 9. Check Permissions  
 <code>rosa verify permissions</code>
 
-10. Verify that your AWS account can support the installation		
+10. Verify that your AWS account can support the installation  
 <code>rosa verify quota</code>
