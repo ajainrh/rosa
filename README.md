@@ -44,10 +44,11 @@ Below are all the steps required to create ROSA Cluster.
 	- You will get Insufficient ec2 quota error. ROSA installation needs **100** vCPUs and it will not allow you to go any further unless that is available to the account.
 	
 	- You can run this command to get more details		
-	<code>aws service-quotas get-service-quota \	
+	```
+	aws service-quotas get-service-quota \
 	--service-code ec2 \	
 	--quota-code L-1216C47A
-	</code>
+	```
 	
 	- To increase the quote run this command		
 	<code>aws service-quotas request-service-quota-increase \	
@@ -60,12 +61,14 @@ Below are all the steps required to create ROSA Cluster.
 	
 11. Initialize ROSA		
 <code>rosa init</code>
-	- It will give you a warning that oc client is needed		
-		<code>rosa download oc		
-	sudo mv oc /usr/local/bin		
-	sudo mv openshift-client-mac/oc /usr/local/bin	
-	sudo mv openshift-client-mac/kubectl /usr/local/bin
-	</code>
+	- It will give you a warning that oc client is needed	
+	```
+	rosa download oc
+   sudo mv oc /usr/local/bin
+   sudo mv openshift-client-mac/oc /usr/local/bin
+   sudo mv openshift-client-mac/kubectl /usr/local/bin
+	```
+	
 	
 12. Initialize ROSA again		
 <code>rosa init</code>
@@ -77,11 +80,11 @@ Below are all the steps required to create ROSA Cluster.
 <code>rosa create admin --cluster=democluster</code>	
 It will auto-generate the password. Use that to login to the OpenShift cluster
 15. For deleting the cluster		
-<code>
-rosa delete cluster --cluster=democluster		
-rosa logs uninstall -c democluster --watch	</code>
 
-
+```
+rosa delete cluster --cluster=democluster
+rosa logs uninstall -c democluster --watch
+```
 
 16. Watch logs and wait till cluster is deleted, then run the command to clean up the cloud formation stack created during rosa init		
 
