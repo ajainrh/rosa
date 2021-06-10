@@ -50,7 +50,9 @@ Below are all the steps required to create ROSA Cluster.
 	--quota-code L-1216C47A
 	```
 	
-	- To increase the quote run this command	```	
+	- To increase the quote run this command
+
+	```	
 	aws service-quotas request-service-quota-increase \	--service-code ec2 \	
 	--quota-code L-1216C47A \	
 	--desired-value 100
@@ -60,7 +62,8 @@ Below are all the steps required to create ROSA Cluster.
 	
 11. Initialize ROSA		
 <code>rosa init</code>
-	- It will give you a warning that oc client is needed	
+	- It will give you a warning that oc client is needed
+
 	```
 	rosa download oc
    sudo mv oc /usr/local/bin
