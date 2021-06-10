@@ -26,6 +26,7 @@ Below are all the steps required to create ROSA Cluster.
 	Default region name [None]: us-east-2
 	Default output format [None]: json
 	```
+	
 7. Check if the account got set up properly		
 	<code>
 	aws sts get-caller-identity
@@ -41,65 +42,3 @@ Below are all the steps required to create ROSA Cluster.
 
 10. Verify that your AWS account can support the installation	
 <code>rosa verify quota</code>
-	- You will get Insufficient ec2 quota error. ROSA installation needs **100** vCPUs and it will not allow you to go any further unless that is available to the account.
-	
-	- You can run this command to get more details		
-	```
-	aws service-quotas get-service-quota \
-	--service-code ec2 \	
-	--quota-code L-1216C47A
-	```
-	
-	- To increase the quote run the command below. This will open a ticket in AWS and it will take some back and forth to get it approved to 100
-
-	```	
-	aws service-quotas request-service-quota-increase \
-	--service-code ec2 \	
-	--quota-code L-1216C47A \	
-	--desired-value 100
-   ```
-
-	
-11. Initialize ROSA		
-<code>rosa init</code>
-	- It will give you a warning that oc client is needed
-
-	```
-	rosa download oc
-   sudo mv oc /usr/local/bin
-   sudo mv openshift-client-mac/oc /usr/local/bin
-   sudo mv openshift-client-mac/kubectl /usr/local/bin
-	```
-	```
-	
-12. Initialize ROSA again		
-<code>rosa init</code>
-
-13. Create Cluster		
-<code>rosa create cluster --interactive</code>
-	- To watch the logs, run		
-	<code>rosa logs install -c democluster --watch</code>
-14. Once the cluster is created, it will give you the link to ROSA console but you will see that it will have the Cluster_SRE User for login. To create cluster admin		
-<code>rosa create admin --cluster=democluster</code>	
-It will auto-generate the password. Use that to login to the OpenShift cluster
-15. For deleting the cluster		
-
-```
-rosa delete cluster --cluster=democluster
-rosa logs uninstall -c democluster --watch
-```
-
-16. Watch logs and wait till cluster is deleted, then run the command to clean up the cloud formation stack created during rosa init		
-
-<code>
-rosa init --delete-stack
-</code>
-
-	
-	
-	
-	
-	
-	
-	
-	
