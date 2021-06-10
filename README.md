@@ -43,7 +43,7 @@ Below are all the steps required to create ROSA Cluster.
 <code>rosa verify quota</code>
 	- You will get Insufficient ec2 quota error. ROSA installation needs **100** vCPUs and it will not allow you to go any further unless that is available to the account.
 	
-	- You can run this to get more details		
+	- You can run this command to get more details		
 	<code>aws service-quotas get-service-quota \	
 	--service-code ec2 \	
 	--quota-code L-1216C47A
