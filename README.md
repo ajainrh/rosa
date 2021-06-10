@@ -37,8 +37,10 @@ Below are all the steps required to create ROSA Cluster.
 	- To login to your Red Hat account, get an offline access token at  <https://cloud.redhat.com/openshift/token/rosa>		
 	- Go to that link and copy paste the token onto the cli
 		
-9. Check Permissions  
-<code>rosa verify permissions</code>
+9. Check Permissions	
 
-10. Verify that your AWS account can support the installation  
-<code>rosa verify quota</code>
+	<code>rosa verify permissions</code>
+
+10. Verify that your AWS account can support the installation
+
+	<code>rosa verify quota</code>
