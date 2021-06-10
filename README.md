@@ -81,10 +81,12 @@ It will auto-generate the password. Use that to login to the OpenShift cluster
 rosa delete cluster --cluster=democluster		
 rosa logs uninstall -c democluster --watch	</code>
 
+
 16. Watch logs and wait till cluster is deleted, then run the command to clean up the cloud formation stack created during rosa init
 <code>
 rosa init --delete-stack
 </code>
+
 	
 	
 	
