@@ -57,8 +57,7 @@ Below are all the steps required to create ROSA Cluster.
 	--quota-code L-1216C47A \	
 	--desired-value 100
    ```
-
-	- This will open a ticket in AWS and it will take some back and forth to get it approved to 100
+- This will open a ticket in AWS and it will take some back and forth to get it approved to 100
 	
 11. Initialize ROSA		
 <code>rosa init</code>
