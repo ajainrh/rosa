@@ -50,14 +50,15 @@ Below are all the steps required to create ROSA Cluster.
 	--quota-code L-1216C47A
 	```
 	
-	- To increase the quote run this command
+	- To increase the quote run the command below. This will open a ticket in AWS and it will take some back and forth to get it approved to 100
 
 	```	
-	aws service-quotas request-service-quota-increase \	--service-code ec2 \	
+	aws service-quotas request-service-quota-increase \
+	--service-code ec2 \	
 	--quota-code L-1216C47A \	
 	--desired-value 100
    ```
-- This will open a ticket in AWS and it will take some back and forth to get it approved to 100
+
 	
 11. Initialize ROSA		
 <code>rosa init</code>
