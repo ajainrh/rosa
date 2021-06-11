@@ -12,10 +12,9 @@ Below are all the steps required to create ROSA Cluster.
 3. Download AWS and ROSA cli
 
 4. Move rosa to your directory in your path so that it can be referenced from anywhere
-
-  ```
-  $ sudo mv rosa /usr/local/bin/
-  ```
+   ```
+   $ sudo mv rosa /usr/local/bin/
+   ```
 
 5. Configure your AWS CLI with your credentials
 
