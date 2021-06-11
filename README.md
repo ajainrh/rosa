@@ -15,6 +15,7 @@ Below are all the steps required to create ROSA Cluster.
 	```
 $ sudo mv rosa /usr/local/bin/
 ```
+
 5. Configure your AWS CLI with your credentials
 
 	```
