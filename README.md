@@ -43,7 +43,7 @@ Below are all the steps required to create ROSA Cluster.
    $ rosa login
    ```
 
-   - \- To login to your Red Hat account, get an offline access token at <https://cloud.redhat.com/openshift/token/rosa>
+   - To login to your Red Hat account, get an offline access token at <https://cloud.redhat.com/openshift/token/rosa>
    - Go to that link and copy paste the token onto the cli
 
 9. Check Permissions
@@ -108,7 +108,7 @@ Below are all the steps required to create ROSA Cluster.
 
       ```
       $ rosa logs install -c democluster --watch
-
+      
 14. Once the cluster is created, it will give you the link to ROSA console but you will see that it will have the Cluster_SRE User for login. To create cluster admin
 
     ```
@@ -119,10 +119,10 @@ Below are all the steps required to create ROSA Cluster.
 
 15.  For deleting the cluster
 
-    ```
-    $ rosa delete cluster --cluster=democluster
-    $ rosa logs uninstall -c democluster --watch
-    ```
+      ```
+      $ rosa delete cluster --cluster=democluster
+      $ rosa logs uninstall -c democluster --watch
+      ```
 
 16. Watch logs and wait till cluster is deleted, then run the command to clean up the cloud formation stack created during rosa init
 
