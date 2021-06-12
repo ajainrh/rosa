@@ -1,4 +1,3 @@
-@@ -0,0 +1,134 @@
 # ROSA Installation Steps
 
 Red Hat OpenShift Service on AWS (ROSA) is a fully-managed and jointly supported Red Hat OpenShift offering that combines the power of Red Hat OpenShift, the industry’s most comprehensive enterprise Kubernetes platform, and the AWS public cloud.
